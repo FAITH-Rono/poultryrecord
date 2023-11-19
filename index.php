@@ -17,7 +17,7 @@ if (!$email){
     <div class="mainCont">
         <nav>
             <div class="mylogo">
-                <img src="../images/cock.jpeg" alt="" width="60px" height="60px">
+                <img src="images/cock.jpeg" alt="" width="50px" height="50px">
                 <!-- Name of farm -->
                 <h2>POULTRY FARM</h2>
             </div>
@@ -28,6 +28,11 @@ if (!$email){
 </svg>
                 <li><a href="index.php">Home</a></li>
                 <li class="navigation-li"><a class="navigation-a" href="#about">About</a></li>
+                <li><a href="birds.php">birds</a></li>
+                <li><a href="financial.php">financial</a></li>
+                <li><a href="investments.php">investments</a></li>
+                <li><a href="medicine.php">medicine</a></li>
+                <li><a href="production.php">production</a></li>
                     <li><a href="Register.php">Register</a></li>
                     <li><a href="Login.php">Login</a></li>
                 </ul>
