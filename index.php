@@ -42,7 +42,7 @@ if (!$email){
             <!-- home -->
             <div class="home">
                 <div class="homeText">
-                    Welcome to Poultry Farm! The largest farm in Kenya!
+                   "Welcome to the Poultry Farm Records Management System (PFRMS)! Streamline your poultry farm operations with our comprehensive record-keeping solution. 
                 </div>
             </div>
             <!-- About -->
@@ -67,16 +67,3 @@ if (!$email){
     </div>
 </body>
 </html>
-
-<style>
-    nav{
-     background-color: #658e9a; 
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    align-items: center;
-}
-</style>
