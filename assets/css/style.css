@@ -12,9 +12,9 @@ nav{
     color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
+    /* padding: 5px; */
+    padding-left: 20px;
+    padding-right: 10px;
     align-items: center;
 }
 .mylogo{
@@ -35,9 +35,9 @@ nav .mynavigation ul{
     flex-direction: row;
     align-items: center;
 }
-nav .mynavigation ul li{
+.mynavigation ul li{
     list-style-type: none;
-    padding-right: 60px;
+    padding-right: 30px;
     font-size: 25px;
 }
 .mainContent{
@@ -101,3 +101,22 @@ footer{
 }
 
 
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

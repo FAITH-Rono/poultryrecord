@@ -1,3 +1,7 @@
 <?php 
-$con = mysqli_connect('localhost', 'root', '', 'poultryfarm');
+$conn = mysqli_connect('localhost', 'root', '', 'poultryfarm');
+if (!$conn){
+    die("Connection Error");
+    
+}
 ?>
