@@ -16,7 +16,7 @@
                 <th>Quantity</th>
                 <th>Cost (ksh)</th>
                 <th>Revenue (ksh)</th>
-                <th>Profit (ksh)</th>  <!-- ererere -->
+                <th>Profit (ksh)</th>  
             </tr> <!-- this is a comment -->
         </thead>
         <tbody>
