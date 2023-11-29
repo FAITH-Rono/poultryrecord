@@ -17,7 +17,7 @@
                 <th>Cost (ksh)</th>
                 <th>Revenue (ksh)</th>
                 <th>Profit (ksh)</th>
-            </tr>
+            </tr> <!-- this is a comment -->
         </thead>
         <tbody>
             <!-- Dynamic data will be inserted here -->
