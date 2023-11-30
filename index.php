@@ -1,4 +1,7 @@
-<?php require "./controller/index.php";
+<?php
+ require_once "./controller/connection.php";
+ require_once "./controller/functions.php";
+ $result = display_data();
 ?>
 <!DOCTYPE html>
 <html lang="en">
