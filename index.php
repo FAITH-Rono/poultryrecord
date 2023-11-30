@@ -11,12 +11,10 @@
     <div class="mainCont">
         <nav>
             <div class="mylogo">
-                <img src="images/cock.jpeg" alt="" width="50px" height="50px">
+                <!-- <img src="images/cock.jpeg" alt="" width="50px" height="50px"> -->
                 <!-- Name of farm -->
                 <h2>POULTRY FARM RECORDS MANAGEMENT SYSTEM</h2>
             </div>
-            <?php echo $_SESSION['email']; ?>
-            <a href="logout.php">logout</a>
             <div class="mynavigation">
                 <ul>
 
@@ -28,7 +26,8 @@
                 <li><a href="Dashboard/production.php">production</a></li>
                 <li><a href="Dashboard/feed.php">feed</a></li>
                     <li><a href="Register.php">Register</a></li>
-                    <li><a href="Login.php">Login</a></li>
+                    <li><a href="Login.php">Login</a></li>      
+            <a href="logout.php">Logout</a>
                 </ul>
             </div>
         </nav>
