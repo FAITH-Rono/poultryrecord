@@ -1,12 +1,10 @@
-<!-- <?php 
-session_start();
-require_once"connection.php";
-$email = "";
-$username = "";
-$password = "";
-$errors = array(); -->
-
 <?php 
+// session_start();
+// require_once"connection.php";
+// $email = "";
+// $username = "";
+// $password = "";
+// $errors = array();
 
 require_once 'connection.php';
 
@@ -17,7 +15,6 @@ function display_data(){
     return $result;
 }
 ?>
-
 //if user signup button
 if(isset($_POST['register'])){
     $username = mysqli_real_escape_string($conn, $_POST['username']);
