@@ -1,32 +1,23 @@
 <?php 
-// session_start();
-// require_once"connection.php";
-// $email = "";
-// $username = "";
-// $password = "";
-// $errors = array();
+session_start();
+require "connection.php";
+$email = "";
+$username = "";
+$password = "";
+$errors = array();
 
-require_once 'connection.php';
-
-function display_data(){
-    global $con;
-    $query = "select *from birds";
-    $result = mysqli_query($con,$query);
-    return $result;
-}
-?>
 //if user signup button
 if(isset($_POST['register'])){
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
-    $cpassword = mysqli_real_escape_string($conn, $_POST['cpassword']);
+    $username = mysqli_real_escape_string($con, $_POST['username']);
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $cpassword = mysqli_real_escape_string($con, $_POST['cpassword']);
 
     if($password !== $cpassword){
-        $errors['password'] = "connfirm password not matched!";
+        $errors['password'] = "Confirm password not matched!";
     }
     $email_check = "SELECT * FROM register_users WHERE email = '$email'";
-    $res = mysqli_query($conn, $email_check);
+    $res = mysqli_query($con, $email_check);
     if(mysqli_num_rows($res) > 0){
         $errors['email'] = "Email that you have entered is already exist!";
 
@@ -36,25 +27,22 @@ if(isset($_POST['register'])){
         $sql = "INSERT INTO register_users (username, email, password)
          VALUES ('$username', '$email', '$encpass')";
 
-        if (mysqli_query($conn, $sql)) {
+        if (mysqli_query($con, $sql)) {
                 $_SESSION['email'] = $email;
                 header('location: index.php');
 
         } else {
-            header('location: register.php?invalid register');
-
-          echo "Error: " . $sql . "<br>" . mysqli_error($connn);
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
 }
-
+    
 }
-
-
+   //if user click login button
     if(isset($_POST['login'])){
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $email = mysqli_real_escape_string($con, $_POST['email']);
+        $password = mysqli_real_escape_string($con, $_POST['password']);
         $check_email = "SELECT * FROM register_users WHERE email = '$email'";
-        $res = mysqli_query($conn, $check_email);
+        $res = mysqli_query($con, $check_email);
         if(mysqli_num_rows($res) > 0){
             $fetch = mysqli_fetch_assoc($res);
             $fetch_pass = $fetch['password'];
