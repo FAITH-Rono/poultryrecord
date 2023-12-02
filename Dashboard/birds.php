@@ -53,23 +53,22 @@ function display_data(){
                       <table class="table table-bordered text-center"> 
                       <tr class="bg-dark text-white">
       <th scope="col">id</th>
-      <th scope="col">Breed</th>
+      <th scope="col">Breed (Broilers and Layers)</th>
       <th scope="col">Age</th>
       <th scope="col">Sex</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
     <tr>
-      <?php
-      while($row = mysqli_fetch_assoc($result))
-      {
-?>
- <td><?php echo $row['id']; ?></td>
- <td><?php echo $row['Breed']?></td>
- <td><?php echo $row['Age']?></td>
- <td><?php echo $row['Sex']?></td>
- <td><a href="#" class="btn-primary">Edit</a></td>
- <td><a href="#" class="btn-danger">Delete</a></td>
+    <?php
+    while ($row = mysqli_fetch_assoc($result)) {
+    ?>
+    <td><?php echo $row['id']; ?></td>
+    <td><?php echo $row['Breed']; ?></td>
+    <td><?php echo $row['Age']; ?></td>
+    <td><?php echo $row['Sex']; ?></td>
+    <td><a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a></td>
+    <td><a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
 </tr>
 <?php
       }

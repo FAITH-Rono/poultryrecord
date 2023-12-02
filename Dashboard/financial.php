@@ -54,22 +54,23 @@ function display_data(){
                       <tr class="bg-dark text-white">
       <th scope="col">Date</th>
       <th scope="col">Description</th>
-      <th scope="col">Amount (KSH)</th>
+      <th scope="col">Amount(KSH)</th>
       <th scope="col">Type</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
     <tr>
-      <?php
-      while($row = mysqli_fetch_assoc($result))
-      {
-?>
- <td><?php echo $row['Date']; ?></td>
- <td><?php echo $row['Description']?></td>
- <td><?php echo $row['Amount']?></td>
- <td><a href="#" class="btn-primary">Edit</a></td>
- <td><a href="#" class="btn-danger">Delete</a></td>
+    <?php
+    while ($row = mysqli_fetch_assoc($result)) {
+    ?>
+    <td><?php echo isset($row['Date']) ? $row['Date'] : ''; ?></td>
+    <td><?php echo isset($row['Description']) ? $row['Description'] : ''; ?></td>
+    <td><?php echo isset($row['Amount']) ? $row['Amount'] : ''; ?></td>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
 </tr>
+
+
 <?php
       }
       ?>
